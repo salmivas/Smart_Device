@@ -4,6 +4,8 @@ $mobile-tablet-width: 1023px;
 $desktop-width: 1024px;
 $retina-dpi: 144dpi;
 
+$roboto-condensed: "Roboto Condensed", sans-serif;
+
 @mixin no-list {
   padding: 0;
   margin: 0;
