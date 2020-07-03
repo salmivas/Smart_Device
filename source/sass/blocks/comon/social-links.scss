@@ -1,0 +1,15 @@
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  max-width: inherit;
+
+  & li:nth-of-type(n+2) {
+    margin-left: 16px;
+  }
+}
+
+.social-links__link {
+  display: flex;
+  align-items: center;
+}

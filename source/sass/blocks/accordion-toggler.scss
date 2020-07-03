@@ -1,0 +1,11 @@
+.accordion-toggler {
+  display: none;
+
+  @media (max-width: $max-mobile-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include no-button-style;
+  }
+}
