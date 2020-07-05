@@ -1,0 +1,153 @@
+.services {
+  font-family: $roboto-condensed;
+  font-style: normal;
+  font-weight: normal;
+
+  background-color: $blue-grey;
+}
+
+.services__inner {
+  max-width: 1390px;
+  margin: 0 auto;
+  padding: 88px 110px 103px;
+
+  @media (max-width: $max-tablet-width) {
+    padding: 45px 25px 78px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 49px 15px 64px;
+  }
+}
+
+.services h2 {
+  margin: 0;
+  margin-bottom: 51px;
+
+  font-family: $roboto-condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 49px;
+    padding-right: 100px;
+
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 0;
+
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.services ul {
+  @include no-list-style;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $max-tablet-width) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    // flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.services li {
+  position: relative;
+
+  display: flex;
+  width: 370px;
+  height: 620px;
+  margin-bottom: 24px;
+
+  @include qnd-services-li-desktop;
+
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 40px;
+    width: 720px;
+    height: 256px;
+
+    @include qnd-services-li-tablet;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 30px;
+    width: 290px;
+    height: 256px;
+  }
+}
+
+.services a {
+  display: flex;
+  flex-direction: column;
+}
+
+.services img {
+  width: 370px;
+  height: 620px;
+
+  @media (max-width: $max-tablet-width) {
+    width: 720px;
+    height: 256px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 290px;
+    height: 256px;
+  }
+}
+
+.services svg {
+  fill: none;
+}
+
+.services__inner div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 63px;
+  height: 63px;
+
+  background-color: $light-blue;
+}
+
+.services p {
+  position: absolute;
+  top: 50px;
+  left: 44px;
+
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+
+  @media (max-width: $max-tablet-width) {
+    top: 40px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    top: 30px;
+    left: 34px;
+  }
+}
