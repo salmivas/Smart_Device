@@ -9,6 +9,43 @@ $retina-dpi: 144dpi;
 $roboto-condensed: "Roboto Condensed", sans-serif;
 $pt-mono-monospace: "PT Mono", monospace;
 
+@mixin visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin button-style {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  font-family: $roboto-condensed;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $white;
+
+  background-color: $transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+}
+
 @mixin no-list-style {
   padding: 0;
   margin: 0;
@@ -26,4 +63,17 @@ $pt-mono-monospace: "PT Mono", monospace;
   border: none;
 
   cursor: pointer;
+}
+
+@mixin no-input-style {
+  padding: 0;
+
+  color: $white;
+
+  background-color: $white-transparent;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
 }

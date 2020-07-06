@@ -51,20 +51,22 @@
     }
   }
 
-  &:hover {
-    background-color: $light-blue;
-    cursor: pointer;
+  @media (min-width: $desktop-width) {
+    &:hover {
+      background-color: $light-blue;
+      cursor: pointer;
 
-    & p {
-      color: $white;
-    }
+      & p {
+        color: $white;
+      }
 
-    & h3 {
-      color: $white;
-    }
+      & h3 {
+        color: $white;
+      }
 
-    & svg {
-      fill: $white;
+      & svg {
+        fill: $white;
+      }
     }
   }
 

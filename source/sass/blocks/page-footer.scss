@@ -71,8 +71,10 @@
   flex-shrink: 0;
   flex-direction: column;
   max-width: 216px;
+  margin-right: 35px;
 
   @media (max-width: $max-tablet-width) {
+    margin: 0;
     padding: 0 25px;
     flex-direction: row;
     max-width: unset;
@@ -104,6 +106,7 @@
 .page-footer__general-info {
   display: flex;
   align-items: flex-start;
+  width: 990px;
 
   @media (max-width: $max-tablet-width) {
     margin-top: 26px;
@@ -186,7 +189,7 @@
 }
 
 .page-footer__contacts {
-  margin-left: 154px;
+  margin-left: auto;
 
   @media (max-width: $max-tablet-width) {
     margin-left: 137px;
