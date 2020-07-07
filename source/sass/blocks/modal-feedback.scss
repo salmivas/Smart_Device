@@ -1,0 +1,192 @@
+.modal-feedback {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: $black-transparent-40;
+
+  &--hidden {
+    display: none;
+  }
+
+  & p,
+  input,
+  textarea,
+  span {
+    font-family: $pt-mono-monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.modal-feedback__inner {
+  position: relative;
+
+  width: 490px;
+
+  background-color: $light-blue;
+
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.modal-feedback__form {
+  display: flex;
+  justify-content: flex-end;
+  padding: 24px 39px 36px;
+}
+
+//IE-FIXER
+.modal-feedback form {
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: stretch;
+  // flex-direction: column;
+}
+
+.modal-feedback p {
+  margin: 0;
+
+  &:first-child {
+    margin-bottom: 12px;
+
+    font-family: $roboto-condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.modal-feedback input {
+  @include no-input-style;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  padding-left: 16px;
+
+  color: $darker-grey-transparent-50;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.modal-feedback label:not([for="modal-admission"]) {
+  @include visually-hidden;
+}
+
+.modal-feedback__form-title {
+  margin-bottom: 32px;
+}
+
+.modal-feedback__form-contacts {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  & div {
+    width: 100%;
+  }
+
+  & div:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.modal-feedback__form-question {
+  margin-bottom: 24px;
+}
+
+.modal-feedback__form-question textarea {
+  @include no-input-style;
+  padding: 16px;
+  padding-top: 11px;
+  min-width: 100%;
+  height: 104px;
+
+  color: $darker-grey-transparent-50;
+
+  resize: none;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.modal-feedback__form-admission {
+  display: flex;
+  flex-direction: column;
+
+  & div {
+    display: flex;
+  }
+}
+
+.modal-feedback__form-admission button {
+  @include button-style;
+  width: 100%;
+  padding: 16px 15px 13px;
+  margin-bottom: 35px;
+}
+
+.modal-feedback__form-admission input {
+  @include visually-hidden;
+}
+
+.modal-feedback__form-admission label {
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: $white-transparent-80;
+}
+
+.modal-feedback__form-admission label::before {
+  content: "";
+  display: block;
+
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 31px;
+  padding-left: 10px;
+
+  border: 1px solid $white;
+  background-repeat: no-repeat;
+  background-position: 3px 4px;
+  background-size: 9px 6px;
+}
+
+.modal-feedback__form-admission input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 6'%3e%3cpath fill='none' d='M0.5 2L3.5 5L8 0.5' stroke='white'/%3e%3c/svg%3e");
+}
+
+.modal-feedback__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include no-button-style;
+}

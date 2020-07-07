@@ -40,20 +40,20 @@
           <h1>Печатные платы</h1>
           <div class="header__intro-inner">
             <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="header__intro-consult-button button" href="#">
+            <a class="header__intro-consult-button button" href="#feedback">
               <span>Получить бесплатную консультацию</span>
               <span>Бесплатная консультация</span>
             </a>
           </div>
         </div>
         <div class="header__scroll-to-bottom">
-          <a href="#">Скролл вниз</a>
+          <a href="#advantages">Скролл вниз</a>
         </div>
       </div>
     </header>
     <section class="about-us">
       <div class="about-us__inner">
-        <div class="advantages">
+        <div class="advantages" id="advantages">
           <h2 class="visually-hidden">Наши преимущества</h2>
           <ul>
             <li>
@@ -172,7 +172,7 @@
         </ul>
       </div>
     </section>
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
       <div class="feedback__form">
         <form action="#" method="post">
@@ -281,8 +281,48 @@
         </p>
       </div>
     </footer>
-    <script src="js/app.js"></script>
-    <script src="js/picturefill.js"></script>
+    <section class="modal-feedback modal-feedback--hidden">
+      <div class="modal-feedback__inner">
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <div class="modal-feedback__form">
+          <form action="#" method="post">
+            <button class="modal-feedback__close-button" type="reset">
+              Закрыть форму
+              <svg width="16" height="16" viewbox="0 0 16 16" role="img">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+            </button>
+            <div class="modal-feedback__form-title">
+              <p>Закажите звонок</p>
+              <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+            </div>
+            <div class="modal-feedback__form-contacts">
+              <div>
+                <label for="modal-user-name">Имя</label>
+                <input id="modal-user-name" type="text" name="name" placeholder="Имя" required>
+              </div>
+              <div>
+                <label for="modal-user-phone">Телефон</label>
+                <input id="modal-user-phone" type="tel" name="phone" placeholder="Телефон" maxlength="18" required>
+              </div>
+            </div>
+            <div class="modal-feedback__form-question">
+              <label for="modal-question">Ваш вопрос</label>
+              <textarea id="modal-question" name="question" placeholder="Ваш вопрос" required></textarea>
+            </div>
+            <div class="modal-feedback__form-admission">
+              <button type="submit">Отправить</button>
+              <div>
+                <input name="modal-admission" type="checkbox" id="modal-admission" checked>
+                <label for="modal-admission">Я согласен на обработку персональных<br>данных</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
   </body>
 
 </html>
