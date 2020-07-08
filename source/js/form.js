@@ -17,6 +17,7 @@
   var ERROR_STYLE = "shake 0.8s";
   var LOCALSTORAGE_DATA_NAME = "userData";
   var PHONE_VALUE_STARTS_FROM = "7 ";
+  var EMERSION_TIMEOUT = 500;
 
   var KeyCode = {
     ESCAPE: {
@@ -54,7 +55,10 @@
   var showPopup = function showPopup() {
     modalFeedback.classList.remove(MODAL_HIDDEN);
     body.style.overflow = OVERFLOW_HIDDEN;
-    modalUserName.autofocus = true;
+
+    setTimeout(function () {
+      modalUserName.focus();
+    }, EMERSION_TIMEOUT);
   };
 
   var hidePopup = function hidePopup() {

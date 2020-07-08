@@ -30,11 +30,11 @@
   justify-content: flex-end;
   max-width: 1390px;
   margin: 0 auto;
-  padding: 91px 110px 113px;
+  padding: 91px 111px 113px;
 
   @media (max-width: $max-tablet-width) {
     justify-content: center;
-    padding: 80px 87px 103px 92px;
+    padding: 80px 87px 103px 89px;
   }
 
   @media (max-width: $max-mobile-width) {
@@ -84,6 +84,16 @@
       line-height: 39px;
     }
   }
+
+  &:last-child {
+    @media (max-width: $max-tablet-width) {
+      padding-left: 4px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      padding: 0;
+    }
+  }
 }
 
 .feedback input {
@@ -95,8 +105,6 @@
   width: 270px;
   height: 50px;
   padding-left: 16px;
-
-  color: $darker-grey-transparent-50;
 
   &::placeholder {
     color: $white;
@@ -110,6 +118,16 @@
     height: 52px;
     width: 100%;
   }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      @include shadow-on-hover;
+    }
+
+    &:focus {
+      @include shadow-on-focus;
+    }
+  }
 }
 
 .feedback label:not([for="admission"]) {
@@ -119,12 +137,12 @@
 .feedback__form-title {
   margin-bottom: 50px;
 
-  @media (max-width: $max-mobile-width) {
-    margin-bottom: 26px;
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 55px;
   }
 
   @media (max-width: $max-mobile-width) {
-    //
+    margin-bottom: 26px;
   }
 }
 
@@ -134,6 +152,8 @@
   margin-bottom: 41px;
 
   @media (max-width: $max-tablet-width) {
+    padding-left: 3px;
+
     & div {
       width: 47.3%;
     }
@@ -158,6 +178,7 @@
 
   @media (max-width: $max-tablet-width) {
     margin-bottom: 39px;
+    padding-left: 3px;
   }
 
   @media (max-width: $max-mobile-width) {
@@ -172,8 +193,6 @@
   min-width: 100%;
   height: 154px;
 
-  color: $darker-grey-transparent-50;
-
   resize: none;
 
   &::placeholder {
@@ -182,6 +201,20 @@
 
   @media (max-width: $max-tablet-width) {
     height: 160px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    height: 104px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      @include shadow-on-hover;
+    }
+
+    &:focus {
+      @include shadow-on-focus;
+    }
   }
 }
 
@@ -198,16 +231,14 @@
 }
 
 .feedback__form-admission button {
-  @include button-style;
   flex-shrink: 0;
   padding: 15px 79px 12px;
 
   @media (max-width: $max-tablet-width) {
-    padding: 16px 85px 15px;
+    padding: 16px 85px 13px;
   }
 
   @media (max-width: $max-mobile-width) {
-    // padding: 16px 15px 15px;
     margin-bottom: 31px;
   }
 }
@@ -233,6 +264,14 @@
   @media (max-width: $max-mobile-width) {
     margin: 0;
     padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      cursor: pointer;
+
+      @include opacity-on-hover;
+    }
   }
 }
 

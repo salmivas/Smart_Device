@@ -9,6 +9,20 @@ $retina-dpi: 144dpi;
 $roboto-condensed: "Roboto Condensed", sans-serif;
 $pt-mono-monospace: "PT Mono", monospace;
 
+@mixin opacity-on-hover {
+  opacity: 0.6;
+  transition: opacity 0.3s ease-out;
+}
+
+@mixin shadow-on-hover {
+  box-shadow: 0 14px 28px $black-transparent-10, 0 10px 10px $black-transparent-07;
+  transition: box-shadow 0.3s ease-out;
+}
+
+@mixin shadow-on-focus {
+  box-shadow: 0 14px 28px $black-transparent-10, 0 10px 10px $black-transparent-40;
+}
+
 @mixin visually-hidden {
   position: absolute;
 
@@ -23,27 +37,6 @@ $pt-mono-monospace: "PT Mono", monospace;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-@mixin button-style {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-
-  font-family: $roboto-condensed;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: $white;
-
-  background-color: $transparent;
-  border: 1px solid $white;
-  border-radius: 5px;
 }
 
 @mixin no-list-style {

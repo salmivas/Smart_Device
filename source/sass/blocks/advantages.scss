@@ -1,8 +1,12 @@
 .advantages {
   margin-bottom: 105px;
 
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 56px;
+  }
+
   @media (max-width: $max-mobile-width) {
-    margin-bottom: 57px;
+    margin-bottom: 58px;
   }
 }
 
@@ -23,13 +27,17 @@
   min-height: 299px;
   width: 48.7%;
   margin-bottom: 30px;
-  padding: 40px 35px 40px 46px;
+  padding: 40px 35px 40px 45px;
 
   background-color: $white;
   border: 1px solid $lightest-grey;
   border-left: none;
 
   @include qnd-advantages-li-desktop;
+
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
 
   & svg {
     fill: $light-blue;
@@ -73,15 +81,14 @@
   @media (max-width: $max-tablet-width) {
     min-height: auto;
     width: 48%;
-    padding: 25px 21px 22px 27px;
+    padding: 21px 21px 20px 27px;
 
     @include qnd-advantages-li-tablet;
   }
 
   @media (max-width: $max-mobile-width) {
     width: auto;
-    padding-right: 18px;
-    padding-bottom: 26px;
+    padding: 22px 21px 24px 25px;
 
     @include qnd-advantages-li-mobile;
   }
@@ -89,7 +96,7 @@
 
 .advantages h3 {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 
   font-family: $roboto-condensed;
   font-style: normal;
@@ -126,6 +133,10 @@
 
   @media (max-width: $max-tablet-width) {
     margin-bottom: 10px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 12px;
   }
 }
 

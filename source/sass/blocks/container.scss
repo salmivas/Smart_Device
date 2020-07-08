@@ -2,7 +2,8 @@
   width: 100%;
   max-width: $max-desktop-width;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 51px 0 46px;
+
 
   @media (max-width: $max-tablet-width) {
     padding: 0 25px;

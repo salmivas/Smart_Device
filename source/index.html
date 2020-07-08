@@ -25,11 +25,11 @@
             </svg>
           </a>
           <div class="header__contacts">
-            <a href="mailto:info@sd.ru">
+            <a href="mailto:info@sd.ru" class="header__contacts-mail-link">
               <img src="img/icon-envelope.svg" alt="Написать" width="19" height="14" /><span>info@sd.ru</span>
             </a>
-            <a href="tel:+7(495)0005252">
-              <img src="img/icon-phone-call.svg" alt="Позвонить" /><span>+7 (495) 000 52 52</span>
+            <a href="tel:+7(495)0005252" class="header__contacts-phone-link">
+              <img src="img/icon-phone-call.svg" alt="Позвонить" width="18" height="18" /><span>+7 (495) 000 52 52</span>
             </a>
           </div>
           <button class="header__button button" type="button" name="Заказать звонок" aria-label="Заказать звонок">
@@ -109,11 +109,11 @@
                 <!-- 1х: 370px; 2x: 740px -->
                 <source type="image/webp" srcset="img/manufacture-photo-desktop@1x.webp 1x, img/manufacture-photo-desktop@2x.webp 2x">
                 <!-- 1х: 290px; 2x: 580px -->
-                <source media="(max-width: 767px)" src="img/manufacture-photo-mobile@1x.png" srcset="img/manufacture-photo-mobile@2x.png 2x">
+                <source media="(max-width: 767px)" srcset="img/manufacture-photo-mobile@1x.png, img/manufacture-photo-mobile@2x.png 2x">
                 <!-- 1х: 720px; 2x: 1440px -->
                 <source media="(max-width: 1023px)" srcset="img/manufacture-photo-tablet@1x.png, img/manufacture-photo-tablet@2x.png 2x">
                 <!-- 1х: 370px; 2x: 740px -->
-                <img src="img/manufacture-photo-desktop@1x.png, img/manufacture-photo-desktop@2x.png 2x" alt="Производство плат" width="370" height="620">
+                <img src="img/manufacture-photo-desktop@1x.png" srcset="img/manufacture-photo-desktop@2x.png 2x" alt="Производство плат" width="370" height="620">
               </picture>
               <div>
                 <svg width="6" height="9" viewbox="0 0 6 9" role="img">
@@ -133,11 +133,11 @@
                 <!-- 1х: 370px; 2x: 740px -->
                 <source type="image/webp" srcset="img/assembly-photo-desktop@1x.webp 1x, img/assembly-photo-desktop@2x.webp 2x">
                 <!-- 1х: 290px; 2x: 580px -->
-                <source media="(max-width: 767px)" src="img/assembly-photo-mobile@1x.png" srcset="img/assembly-photo-mobile@2x.png 2x">
+                <source media="(max-width: 767px)" srcset="img/assembly-photo-mobile@1x.png, img/assembly-photo-mobile@2x.png 2x">
                 <!-- 1х: 720px; 2x: 1440px -->
                 <source media="(max-width: 1023px)" srcset="img/assembly-photo-tablet@1x.png, img/assembly-photo-tablet@2x.png 2x">
                 <!-- 1х: 370px; 2x: 740px -->
-                <img src="img/assembly-photo-desktop@1x.png, img/assembly-photo-desktop@2x.png 2x" alt="Производство плат" width="370" height="620">
+                <img src="img/assembly-photo-desktop@1x.png" srcset="img/assembly-photo-desktop@2x.png 2x" alt="Монтаж плат" width="370" height="620">
               </picture>
               <div>
                 <svg width="6" height="9" xmlns="http://www.w3.org/2000/svg">
@@ -156,11 +156,11 @@
                 <!-- 1х: 370px; 2x: 740px -->
                 <source type="image/webp" srcset="img/accessories-photo-desktop@1x.webp 1x, img/accessories-photo-desktop@2x.webp 2x">
                 <!-- 1х: 290px; 2x: 580px -->
-                <source media="(max-width: 767px)" src="img/accessories-photo-mobile@1x.png" srcset="img/accessories-photo-mobile@2x.png 2x">
+                <source media="(max-width: 767px)" srcset="img/accessories-photo-mobile@1x.png, img/accessories-photo-mobile@2x.png 2x">
                 <!-- 1х: 720px; 2x: 1440px -->
                 <source media="(max-width: 1023px)" srcset="img/accessories-photo-tablet@1x.png, img/accessories-photo-tablet@2x.png 2x">
                 <!-- 1х: 370px; 2x: 740px -->
-                <img src="img/accessories-photo-desktop@1x.png, img/accessories-photo-desktop@2x.png 2x" alt="Производство плат" width="370" height="620">
+                <img src="img/accessories-photo-desktop@1x.png" srcset="img/accessories-photo-desktop@2x.png 2x" alt="Комплектующие для светотехники" width="370" height="620">
               </picture>
               <div>
                 <svg width="6" height="9" viewbox="0 0 6 9" role="img">
@@ -187,7 +187,7 @@
             </div>
             <div>
               <label for="user-phone">Телефон</label>
-              <input id="user-phone" type="tel" name="phone" placeholder="Телефон" maxlength="10" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required>
+              <input id="user-phone" type="tel" name="phone" placeholder="Телефон" maxlength="11" required>
             </div>
           </div>
           <div class="feedback__form-question">
@@ -195,7 +195,7 @@
             <textarea id="question" name="question" placeholder="Ваш вопрос" required></textarea>
           </div>
           <div class="feedback__form-admission">
-            <button type="submit">Задать вопрос</button>
+            <button type="submit" class="button">Задать вопрос</button>
             <div>
               <input name="admission" type="checkbox" id="admission" checked>
               <label for="admission">Я согласен на обработку персональных данных</label>
@@ -286,7 +286,7 @@
         <h2 class="visually-hidden">Обратная связь</h2>
         <div class="modal-feedback__form">
           <form action="#" method="post">
-            <button class="modal-feedback__close-button" type="reset">
+            <button class="modal-feedback__close-button button" type="reset">
               Закрыть форму
               <svg width="16" height="16" viewbox="0 0 16 16" role="img">
                 <use xlink:href="#icon-cross"></use>
@@ -299,7 +299,7 @@
             <div class="modal-feedback__form-contacts">
               <div>
                 <label for="modal-user-name">Имя</label>
-                <input id="modal-user-name" type="text" name="name" placeholder="Имя" required>
+                <input id="modal-user-name" type="text" name="name" placeholder="Имя" required autofocus="autofocus">
               </div>
               <div>
                 <label for="modal-user-phone">Телефон</label>
@@ -311,7 +311,7 @@
               <textarea id="modal-question" name="question" placeholder="Ваш вопрос" required></textarea>
             </div>
             <div class="modal-feedback__form-admission">
-              <button type="submit">Отправить</button>
+              <button type="submit" class="button">Отправить</button>
               <div>
                 <input name="modal-admission" type="checkbox" id="modal-admission" checked>
                 <label for="modal-admission">Я согласен на обработку персональных<br>данных</label>

@@ -43,15 +43,6 @@
   padding: 24px 39px 36px;
 }
 
-//IE-FIXER
-.modal-feedback form {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
-  // align-items: stretch;
-  // flex-direction: column;
-}
-
 .modal-feedback p {
   margin: 0;
 
@@ -78,6 +69,14 @@
 
   &::placeholder {
     color: $white;
+  }
+
+  &:hover {
+    @include shadow-on-hover;
+  }
+
+  &:focus {
+    @include shadow-on-focus;
   }
 }
 
@@ -120,6 +119,14 @@
   &::placeholder {
     color: $white;
   }
+
+  &:hover {
+    @include shadow-on-hover;
+  }
+
+  &:focus {
+    @include shadow-on-focus;
+  }
 }
 
 .modal-feedback__form-admission {
@@ -132,7 +139,6 @@
 }
 
 .modal-feedback__form-admission button {
-  @include button-style;
   width: 100%;
   padding: 16px 15px 13px;
   margin-bottom: 35px;
@@ -151,6 +157,10 @@
   font-size: 14px;
   line-height: 16px;
   color: $white-transparent-80;
+
+  &:hover {
+    @include opacity-on-hover;
+  }
 }
 
 .modal-feedback__form-admission label::before {

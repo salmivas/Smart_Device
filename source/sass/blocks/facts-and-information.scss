@@ -6,8 +6,8 @@
   color: $dark-grey;
 
   background-image: url("../../img/2005@1x.png");
-  background-position: -25px 0;
-  background-size: 220px 363px;
+  background-position: -29px 5px;
+  background-size: 220px 319px;
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi) {
@@ -15,13 +15,13 @@
   }
 
   @media (max-width: $max-tablet-width) {
-    padding-left: 191px;
+    padding-left: 182px;
     padding-right: 0;
     padding-bottom: 23px;
 
     background-image: url("../../img/2005-tablet@1x.png");
     background-position: -25px 0;
-    background-size: 251px 361px;
+    background-size: 243px 359px;
 
     @media (min-resolution: $retina-dpi) {
       background-image: url("../../img/2005-tablet@2x.png");
@@ -36,9 +36,10 @@
   }
 }
 
-.facts-and-information h2 {
+.facts-and-information h2:first-child {
   margin: 0;
   margin-bottom: 21px;
+  padding-left: 3px;
 
   font-family: $roboto-condensed;
   font-style: normal;
@@ -64,30 +65,42 @@
 .facts-and-information p {
   margin: 0;
   margin-bottom: 21px;
+  padding-left: 3px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-left: 6px;
+
+    &:last-of-type {
+      margin-bottom: 41px;
+    }
+  }
 
   @media (max-width: $max-mobile-width) {
     margin-bottom: 42px;
+    padding-left: 3px;
 
     &:last-of-type {
-      margin-bottom: 31px;
+      margin-bottom: 27px;
     }
   }
 }
 
 .facts-and-information__details-button {
-  padding: 15px 51px;
-  margin-top: 19px;
+  padding: 14px 50px;
+  margin-top: 16px;
+  margin-left: 3px;
 
   color: $light-blue;
 
   border-color: $light-blue;
 
   @media (max-width: $max-tablet-width) {
-    margin-top: 22px;
-    padding: 15px 50px 14px 50px;
+    margin: 0;
+    margin-left: 6px;
+    padding: 15px 50px 12px 50px;
   }
 
   @media (max-width: $max-mobile-width) {
-    margin-top: 0;
+    margin: 0;
   }
 }

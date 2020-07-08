@@ -12,11 +12,11 @@
   padding: 88px 110px 103px;
 
   @media (max-width: $max-tablet-width) {
-    padding: 45px 25px 78px;
+    padding: 50px 25px 78px;
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 49px 15px 64px;
+    padding: 50px 15px 64px;
   }
 }
 
@@ -41,6 +41,8 @@
 
   @media (max-width: $max-mobile-width) {
     padding: 0;
+    padding-left: 10px;
+    margin-bottom: 42px;
 
     font-size: 28px;
     line-height: 39px;
@@ -59,7 +61,6 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    // flex-direction: row;
     flex-wrap: wrap;
   }
 }
@@ -75,7 +76,7 @@
   @include qnd-services-li-desktop;
 
   @media (max-width: $max-tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 46px;
     width: 720px;
     height: 256px;
 
@@ -96,6 +97,12 @@
 .services a {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      @include opacity-on-hover;
+    }
+  }
 }
 
 .services img {
@@ -147,7 +154,7 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    top: 30px;
+    top: 20px;
     left: 34px;
   }
 }

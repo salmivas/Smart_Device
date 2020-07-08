@@ -29,6 +29,16 @@
       background-image: url("../../img/plates-mobile@2x.png"), url("../../img/triangles-header-mobile.svg"), url("../../img/header-background-mobile@2x.png");
     }
   }
+
+  & a {
+    @media (min-width: $desktop-width) {
+      &:hover {
+        cursor: pointer;
+
+        @include opacity-on-hover;
+      }
+    }
+  }
 }
 
 .header__container {
@@ -60,15 +70,18 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    padding-bottom: 220px;
+    padding-bottom: 211px;
   }
 }
 
 .header__button {
-  & span {
-    display: block;
-    padding: 16px 28px 13px 27px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 180px;
+  min-height: 45px;
+  margin-bottom: 5px;
+  padding-top: 14px;
 
   @media (max-width: $max-tablet-width) {
     display: none;
@@ -83,7 +96,8 @@
   display: flex;
   justify-content: space-between;
   min-width: 430px;
-  margin-right: 50px;
+  margin-right: 49px;
+  margin-bottom: 5px;
 
   & a {
     display: flex;
@@ -103,12 +117,23 @@
   @media (max-width: $max-tablet-width) {
     min-width: 80px;
     margin: 0;
+    margin-bottom: 9px;
   }
 
   @media (max-width: $max-mobile-width) {
     min-width: 71px;
     margin-bottom: 28px;
   }
+}
+
+.header__contacts-mail-link img {
+  width: 25px;
+  height: 19px;
+}
+
+.header__contacts-phone-link img {
+  width: 24px;
+  height: 24px;
 }
 
 .header__intro {
@@ -128,8 +153,8 @@
   }
 
   @media (max-width: $max-tablet-width) {
-    max-width: 427px;
-    padding: 0;
+    max-width: 493px;
+    padding-left: 63px;
 
     & h1 {
       margin-bottom: 29px;
@@ -140,7 +165,7 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    max-width: 427px;
+    padding: 0;
 
     & h1 {
       margin-bottom: 28px;
@@ -227,9 +252,10 @@
 
   @media (max-width: $max-tablet-width) {
     padding: 18px 30px;
+    width: 100%;
   }
 
-  @media (max-width: $max-tablet-width) {
+  @media (max-width: $max-mobile-width) {
     padding: 18px 30px;
 
     & span:nth-of-type(1) {
@@ -247,17 +273,16 @@
 
   & a {
     position: absolute;
-    top: 135px;
-    left: -40px;
+    top: 131px;
+    left: -37px;
 
     font-family: $pt-mono-monospace;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
-    color: $white;
+    color: $white-transparent-50;
 
-    opacity: 0.5;
     transform: rotate(-90deg);
   }
 
