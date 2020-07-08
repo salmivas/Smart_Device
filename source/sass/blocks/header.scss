@@ -30,7 +30,7 @@
     }
   }
 
-  & a {
+  & a:not(.header__logo) {
     @media (min-width: $desktop-width) {
       &:hover {
         cursor: pointer;

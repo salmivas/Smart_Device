@@ -195,4 +195,10 @@
   justify-content: center;
 
   @include no-button-style;
+
+  &:focus {
+    outline-color: $black;
+    outline-style: auto;
+    outline-width: 1px;
+  }
 }
