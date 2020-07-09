@@ -73,14 +73,24 @@
   height: 620px;
   margin-bottom: 24px;
 
-  @include qnd-services-li-desktop;
+  &:not(:nth-of-type(3n)) {
+    margin-right: 30px;
+  }
+
+  @media (min-width: $desktop-width + 364) {
+    &:nth-of-type(4n) {
+      margin-left: 30px;
+    }
+  }
 
   @media (max-width: $max-tablet-width) {
     margin-bottom: 46px;
     width: 720px;
     height: 256px;
 
-    @include qnd-services-li-tablet;
+    &:not(:nth-of-type(3n)) {
+      margin-right: 0;
+    }
 
     &:last-of-type {
       margin-bottom: 0;

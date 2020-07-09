@@ -9,6 +9,7 @@
   var modalUserPhone = document.getElementById('modal-user-phone');
   var modalUserQuestion = document.getElementById('modal-question');
   var modalAdmission = document.getElementById('modal-admission');
+  var inputPhones = document.querySelectorAll('input[type="tel"]');
 
   var MODAL_HIDDEN = 'modal-feedback--hidden';
   var OVERFLOW_HIDDEN = 'hidden';
@@ -30,11 +31,12 @@
     userQuestion: '',
   };
 
-  // eslint-disable-next-line new-cap
-  var phoneMask = IMask(modalUserPhone, {
-    mask: '+0 (000) 000-00-00',
-    lazy: true,
-  });
+  var maskPhone = function (element) {
+    return new window.IMask(element, {
+      mask: '+0 (000) 000-00-00',
+      lazy: true,
+    });
+  };
 
   var onEscKeyDown = function (evt) {
     var isEscKey = evt.key === KeyCode.ESCAPE.LONG || evt.key === KeyCode.ESCAPE.SHORT;
@@ -90,5 +92,8 @@
     }
     shake();
   });
-  phoneMask.unmaskedValue = PHONE_VALUE_STARTS_FROM;
+
+  for (var i = 0; i < inputPhones.length; i++) {
+    maskPhone(inputPhones[i]).unmaskedValue = PHONE_VALUE_STARTS_FROM;
+  }
 })();

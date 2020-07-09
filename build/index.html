@@ -72,9 +72,9 @@
         </div>
       </div>
     </header>
-    <section class="about-us">
-      <div class="about-us__inner">
-        <div class="advantages" id="advantages">
+    <div class="information">
+      <div class="information__inner">
+        <section class="advantages" id="advantages">
           <h2 class="visually-hidden">Наши преимущества</h2>
           <ul>
             <li>
@@ -106,15 +106,15 @@
               <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
             </li>
           </ul>
-        </div>
-        <article class="facts-and-information">
+        </section>
+        <section class="about-us">
           <h2>О компании</h2>
           <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
           <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
-          <a href="#" class="facts-and-information__details-button button">Подробнее</a>
-        </article>
+          <a href="#" class="about-us__details-button button">Подробнее</a>
+        </section>
       </div>
-    </section>
+    </div>
     <section class="services">
       <div class="services__inner">
         <h2>Service Device предлагает следующие товары и услуги</h2>
@@ -134,7 +134,7 @@
                 <!-- 1х: 720px; 2x: 1440px -->
                 <source media="(max-width: 1023px)" srcset="img/manufacture-photo-tablet@1x.png, img/manufacture-photo-tablet@2x.png 2x">
                 <!-- 1х: 370px; 2x: 740px -->
-                <img src="img/manufacture-photo-desktop@1x.png" srcset="img/manufacture-photo-desktop@2x.png 2x" alt="Производство плат" width="370" height="620">
+                <img src="img/manufacture-photo-desktop@1x.png" srcset="img/manufacture-photo-desktop@2x.png 2x" alt="Производство плат" width="370" height="620" loading="lazy">
               </picture>
               <div>
                 <svg width="6" height="9" viewbox="0 0 6 9" role="img">
@@ -158,7 +158,7 @@
                 <!-- 1х: 720px; 2x: 1440px -->
                 <source media="(max-width: 1023px)" srcset="img/assembly-photo-tablet@1x.png, img/assembly-photo-tablet@2x.png 2x">
                 <!-- 1х: 370px; 2x: 740px -->
-                <img src="img/assembly-photo-desktop@1x.png" srcset="img/assembly-photo-desktop@2x.png 2x" alt="Монтаж плат" width="370" height="620">
+                <img src="img/assembly-photo-desktop@1x.png" srcset="img/assembly-photo-desktop@2x.png 2x" alt="Монтаж плат" width="370" height="620" loading="lazy">
               </picture>
               <div>
                 <svg width="6" height="9" xmlns="http://www.w3.org/2000/svg">
@@ -181,7 +181,7 @@
                 <!-- 1х: 720px; 2x: 1440px -->
                 <source media="(max-width: 1023px)" srcset="img/accessories-photo-tablet@1x.png, img/accessories-photo-tablet@2x.png 2x">
                 <!-- 1х: 370px; 2x: 740px -->
-                <img src="img/accessories-photo-desktop@1x.png" srcset="img/accessories-photo-desktop@2x.png 2x" alt="Комплектующие для светотехники" width="370" height="620">
+                <img src="img/accessories-photo-desktop@1x.png" srcset="img/accessories-photo-desktop@2x.png 2x" alt="Комплектующие для светотехники" width="370" height="620" loading="lazy">
               </picture>
               <div>
                 <svg width="6" height="9" viewbox="0 0 6 9" role="img">
@@ -233,24 +233,24 @@
           </a>
           <ul class="social-links">
             <li>
-              <a href="" class="social-links__link" title="Facebook">
+              <a href="#" class="social-links__link" title="Facebook">
                 <img src="img/socials-fb.svg" alt="Facebook" width="27" height="27">
               </a>
             </li>
             <li>
-              <a href="" class="social-links__link" title="Odnoklassniki">
+              <a href="#" class="social-links__link" title="Odnoklassniki">
                 <img src="img/socials-ok.svg" alt="Odnoklassniki" width="26" height="26">
               </a>
             </li>
             <li>
-              <a href="" class="social-links__link" title="VKontakte">
+              <a href="#" class="social-links__link" title="VKontakte">
                 <img src="img/socials-vk.svg" alt="VKontakte" width="27" height="26">
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__general-info">
-          <nav class="page-footer__navigation page-footer__navigation--opened">
+          <nav class="page-footer__navigation">
             <div class="page-footer__navigation-activity">
               <h3>Разделы сайта</h3>
               <button class="page-footer__activity-accordion-toggler accordion-toggler" type="button">
@@ -270,7 +270,7 @@
               <li><a href="#">Контакты</a></li>
             </ul>
           </nav>
-          <div class="page-footer__contacts page-footer__contacts--opened">
+          <div class="page-footer__contacts">
             <div class="page-footer__contacts-activity">
               <h3>Наш офис</h3>
               <button class="page-footer__contacts-accordion-toggler accordion-toggler" type="button">
@@ -280,12 +280,12 @@
                 </svg>
               </button>
             </div>
-            <ul>
-              <li>г. Мытищи, Олимпийский проспект, д.10</li>
-              <li><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
-              <li><a href="tel:+79250038767">+7 (925) 003-87-67</a></li>
-              <li><a href="tel:+792692608079">+7 (926) 926-080-79</a></li>
-            </ul>
+            <div class="page-footer__contacts-list">
+              <address>г. Мытищи, Олимпийский проспект, д.10</address>
+              <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+              <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+              <a href="tel:+792692608079">+7 (926) 926-080-79</a>
+            </div>
           </div>
         </div>
       </div>

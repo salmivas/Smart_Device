@@ -158,12 +158,6 @@
         display: none;
       }
     }
-
-    &--opened {
-      & ul {
-        display: block;
-      }
-    }
   }
 }
 
@@ -198,16 +192,26 @@
     &--closed {
       padding-bottom: 0;
 
-      & ul {
+      & .page-footer__contacts-list {
         display: none;
       }
     }
+  }
+}
 
-    &--opened {
-      & ul {
-        display: block;
-      }
-    }
+.page-footer__contacts-list {
+  opacity: 0.5;
+
+  @media (max-width: $max-mobile-width) {
+    padding-right: 2px;
+  }
+
+  & address {
+    font-style: unset;
+  }
+
+  & a {
+    display: block;
   }
 }
 

@@ -158,6 +158,8 @@
   line-height: 16px;
   color: $white-transparent-80;
 
+  cursor: pointer;
+
   &:hover {
     @include opacity-on-hover;
   }

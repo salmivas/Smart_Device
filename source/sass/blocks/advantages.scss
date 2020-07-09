@@ -33,8 +33,6 @@
   border: 1px solid $lightest-grey;
   border-left: none;
 
-  @include qnd-advantages-li-desktop;
-
   &:nth-last-child(-n + 2) {
     margin-bottom: 0;
   }
@@ -83,14 +81,19 @@
     width: 48%;
     padding: 21px 21px 20px 27px;
 
-    @include qnd-advantages-li-tablet;
+    &:nth-of-type(2n + 1) {
+      min-height: 232px;
+    }
   }
 
   @media (max-width: $max-mobile-width) {
     width: auto;
     padding: 22px 21px 24px 25px;
+    margin-bottom: 20px;
 
-    @include qnd-advantages-li-mobile;
+    &:nth-of-type(n):not(:last-of-type) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -139,5 +142,3 @@
     margin-bottom: 12px;
   }
 }
-
-@include qnd-advantages-h3-nth3-mobile;
