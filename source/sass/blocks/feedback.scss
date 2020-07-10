@@ -104,10 +104,11 @@
   justify-content: center;
   width: 270px;
   height: 50px;
-  padding-left: 16px;
+  padding: 0 16px;
 
   &::placeholder {
     color: $white;
+    opacity: 1;
   }
 
   @media (max-width: $max-tablet-width) {
@@ -197,6 +198,7 @@
 
   &::placeholder {
     color: $white;
+    opacity: 1;
   }
 
   @media (max-width: $max-tablet-width) {
