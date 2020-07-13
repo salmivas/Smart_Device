@@ -31,6 +31,15 @@
       }
     };
 
+    var startWith = function () {
+      footerNavigation.classList.add(FOOTER_NAVIGATION_CLOSED);
+      footerNavigation.querySelector('use').href.baseVal = IconsID.PLUS;
+      footerContacts.classList.add(FOOTER_CONTACTS_CLOSED);
+      footerContacts.querySelector('use').href.baseVal = IconsID.PLUS;
+    };
+
+    startWith();
+
     activityToggler.addEventListener('click', function () {
       if (!footerNavigation.classList.contains(FOOTER_NAVIGATION_CLOSED) && !footerContacts.classList.contains(FOOTER_CONTACTS_CLOSED)) {
         toggleMenu(footerNavigation, FOOTER_NAVIGATION_CLOSED);
