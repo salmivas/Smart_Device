@@ -1,0 +1,13 @@
+.svg-sprite__logo-name {
+  fill: $white;
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+}
+
+.svg-sprite__logo-description {
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+}

@@ -1,11 +1,11 @@
 .information {
-  background-image: url("../../img/triangle-about-us-small-left.svg"), url("../../img/triangle-about-us-small-right.svg"), url("../../img/triangle-about-us-big-right.svg"), url("../../img/triangle-about-us-big-left.svg");
+  background-image: url("../img/triangle-about-us-small-left.svg"), url("../img/triangle-about-us-small-right.svg"), url("../img/triangle-about-us-big-right.svg"), url("../img/triangle-about-us-big-left.svg");
   background-position: 11.9% 45px, bottom 54.3% right 1.7%, 53.5% 147px, -28.2% 114%;
   background-size: 226px 261px, 226px 261px, 872px 873px, 872px 873px;
   background-repeat: no-repeat;
 
   @media (max-width: $max-tablet-width) {
-    background-image: url("../../img/triangle-about-us-big-right.svg");
+    background-image: url("../img/triangle-about-us-big-right.svg");
     background-position: right 308% top 90px;
     background-size: 872px 873px;
   }

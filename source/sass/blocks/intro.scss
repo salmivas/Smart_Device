@@ -4,25 +4,25 @@
 
   position: relative;
   background-color: $blue-grey;
-  background-image: url("../../img/plates-desktop@1x.png"), url("../../img/triangles-header-desktop.svg"), url("../../img/header-background-desktop@1x.png");
+  background-image: url("../img/plates-desktop@1x.png"), url("../img/triangles-header-desktop.svg"), url("../img/header-background-desktop@1x.png");
   background-position: 1038px 258px, 1051px 272px, 0 0;
   background-size: 705px 515px, auto, cover;
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi) {
-    background-image: url("../../img/plates-desktop@2x.png"), url("../../img/triangles-header-desktop.svg"), url("../../img/header-background-desktop@2x.png");
+    background-image: url("../img/plates-desktop@2x.png"), url("../img/triangles-header-desktop.svg"), url("../img/header-background-desktop@2x.png");
   }
 
   @media (max-width: $max-tablet-width) {
     padding-top: 188px;
     padding-bottom: 163px;
 
-    background-image: url("../../img/plates-tablet@1x.png"), url("../../img/triangles-header-tablet.svg"), url("../../img/header-background-tablet@1x.png");
+    background-image: url("../img/plates-tablet@1x.png"), url("../img/triangles-header-tablet.svg"), url("../img/header-background-tablet@1x.png");
     background-position: 510px 113px, 457px 82px, 0 0;
     background-size: 465px 340px, auto, cover;
 
     @media (min-resolution: $retina-dpi) {
-      background-image: url("../../img/plates-tablet@2x.png"), url("../../img/triangles-header-tablet.svg"), url("../../img/header-background-tablet@2x.png");
+      background-image: url("../img/plates-tablet@2x.png"), url("../img/triangles-header-tablet.svg"), url("../img/header-background-tablet@2x.png");
     }
   }
 
@@ -30,12 +30,12 @@
     padding-top: 287px;
     padding-bottom: 68px;
 
-    background-image: url("../../img/plates-mobile@1x.png"), url("../../img/triangles-header-mobile.svg"), url("../../img/header-background-mobile@1x.png");
+    background-image: url("../img/plates-mobile@1x.png"), url("../img/triangles-header-mobile.svg"), url("../img/header-background-mobile@1x.png");
     background-position: 26px 92px, 168px 70px, center;
     background-size: 294px 220px, auto, cover;
 
     @media (min-resolution: $retina-dpi) {
-      background-image: url("../../img/plates-mobile@2x.png"), url("../../img/triangles-header-mobile.svg"), url("../../img/header-background-mobile@2x.png");
+      background-image: url("../img/plates-mobile@2x.png"), url("../img/triangles-header-mobile.svg"), url("../img/header-background-mobile@2x.png");
     }
   }
 

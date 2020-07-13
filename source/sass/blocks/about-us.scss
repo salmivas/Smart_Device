@@ -5,13 +5,13 @@
 
   color: $dark-grey;
 
-  background-image: url("../../img/2005@1x.png");
+  background-image: url("../img/2005@1x.png");
   background-position: -29px 5px;
   background-size: 220px 319px;
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi) {
-    background-image: url("../../img/2005@2x.png");
+    background-image: url("../img/2005@2x.png");
   }
 
   @media (max-width: $max-tablet-width) {
@@ -19,12 +19,12 @@
     padding-right: 0;
     padding-bottom: 23px;
 
-    background-image: url("../../img/2005-tablet@1x.png");
+    background-image: url("../img/2005-tablet@1x.png");
     background-position: -25px 0;
     background-size: 243px 359px;
 
     @media (min-resolution: $retina-dpi) {
-      background-image: url("../../img/2005-tablet@2x.png");
+      background-image: url("../img/2005-tablet@2x.png");
     }
   }
 

@@ -25,12 +25,28 @@
       elementToCheck.querySelector('use').href.baseVal = IconsID.MINUS;
     };
 
+    var toggleNeighbor = function (neighborElement, closingSelector) {
+      if (!neighborElement.classList.contains(closingSelector)) {
+        toggleMenu(neighborElement, closingSelector);
+      }
+    };
+
     activityToggler.addEventListener('click', function () {
-      toggleMenu(footerNavigation, FOOTER_NAVIGATION_CLOSED);
+      if (!footerNavigation.classList.contains(FOOTER_NAVIGATION_CLOSED) && !footerContacts.classList.contains(FOOTER_CONTACTS_CLOSED)) {
+        toggleMenu(footerNavigation, FOOTER_NAVIGATION_CLOSED);
+      } else {
+        toggleMenu(footerNavigation, FOOTER_NAVIGATION_CLOSED);
+        toggleNeighbor(footerContacts, FOOTER_CONTACTS_CLOSED);
+      }
     });
 
     contactsToggler.addEventListener('click', function () {
-      toggleMenu(footerContacts, FOOTER_CONTACTS_CLOSED);
+      if (!footerNavigation.classList.contains(FOOTER_NAVIGATION_CLOSED) && !footerContacts.classList.contains(FOOTER_CONTACTS_CLOSED)) {
+        toggleMenu(footerContacts, FOOTER_CONTACTS_CLOSED);
+      } else {
+        toggleMenu(footerContacts, FOOTER_CONTACTS_CLOSED);
+        toggleNeighbor(footerNavigation, FOOTER_NAVIGATION_CLOSED);
+      }
     });
   }
 })();

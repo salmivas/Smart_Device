@@ -1,12 +1,12 @@
 .feedback {
   background-color: $light-blue;
-  background-image: url("../../img/paper-plane@1x.png"), url("../../img/triangles-header-desktop.svg"), url("../../img/triangle-feedback-small.svg"), url("../../img/triangle-feedback-big.svg");
+  background-image: url("../img/paper-plane@1x.png"), url("../img/triangles-header-desktop.svg"), url("../img/triangle-feedback-small.svg"), url("../img/triangle-feedback-big.svg");
   background-position: top 42.3% left 24.8%, top 51.5% left 15%, top 19.7% right 5.8%, top 84% right -4.7%;
   background-size: 511px 288px, auto, auto, auto;
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi) {
-    background-image: url("../../img/paper-plane@2x.png"), url("../../img/triangles-header-desktop.svg");
+    background-image: url("../img/paper-plane@2x.png"), url("../img/triangles-header-desktop.svg");
   }
 
   & p,

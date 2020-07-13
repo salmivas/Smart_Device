@@ -409,6 +409,14 @@ template {
       padding: 0 15px 0 18px; } }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   min-width: 320px;
   margin: 0;
   padding: 0;
@@ -418,9 +426,20 @@ body {
   color: white; }
 
 html {
+  height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth; }
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+
+footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
 
 *,
 *::before,
@@ -469,16 +488,6 @@ a {
   .logo svg:first-of-type {
     -webkit-transform: scale(0.7, 0.7) translate(-44px, -10px);
             transform: scale(0.7, 0.7) translate(-44px, -10px); } }
-
-.logo__name {
-  fill: white; }
-  @media (max-width: 767px) {
-    .logo__name {
-      display: none; } }
-
-@media (max-width: 767px) {
-  .logo__description {
-    display: none; } }
 
 .social-links {
   display: -webkit-box;
@@ -609,33 +618,33 @@ a {
   padding-bottom: 276px;
   position: relative;
   background-color: #1b2d37;
-  background-image: url("../../img/plates-desktop@1x.png"), url("../../img/triangles-header-desktop.svg"), url("../../img/header-background-desktop@1x.png");
+  background-image: url("../img/plates-desktop@1x.png"), url("../img/triangles-header-desktop.svg"), url("../img/header-background-desktop@1x.png");
   background-position: 1038px 258px, 1051px 272px, 0 0;
   background-size: 705px 515px, auto, cover;
   background-repeat: no-repeat; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     .intro {
-      background-image: url("../../img/plates-desktop@2x.png"), url("../../img/triangles-header-desktop.svg"), url("../../img/header-background-desktop@2x.png"); } }
+      background-image: url("../img/plates-desktop@2x.png"), url("../img/triangles-header-desktop.svg"), url("../img/header-background-desktop@2x.png"); } }
   @media (max-width: 1023px) {
     .intro {
       padding-top: 188px;
       padding-bottom: 163px;
-      background-image: url("../../img/plates-tablet@1x.png"), url("../../img/triangles-header-tablet.svg"), url("../../img/header-background-tablet@1x.png");
+      background-image: url("../img/plates-tablet@1x.png"), url("../img/triangles-header-tablet.svg"), url("../img/header-background-tablet@1x.png");
       background-position: 510px 113px, 457px 82px, 0 0;
       background-size: 465px 340px, auto, cover; } }
   @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi) {
     .intro {
-      background-image: url("../../img/plates-tablet@2x.png"), url("../../img/triangles-header-tablet.svg"), url("../../img/header-background-tablet@2x.png"); } }
+      background-image: url("../img/plates-tablet@2x.png"), url("../img/triangles-header-tablet.svg"), url("../img/header-background-tablet@2x.png"); } }
   @media (max-width: 767px) {
     .intro {
       padding-top: 287px;
       padding-bottom: 68px;
-      background-image: url("../../img/plates-mobile@1x.png"), url("../../img/triangles-header-mobile.svg"), url("../../img/header-background-mobile@1x.png");
+      background-image: url("../img/plates-mobile@1x.png"), url("../img/triangles-header-mobile.svg"), url("../img/header-background-mobile@1x.png");
       background-position: 26px 92px, 168px 70px, center;
       background-size: 294px 220px, auto, cover; } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
     .intro {
-      background-image: url("../../img/plates-mobile@2x.png"), url("../../img/triangles-header-mobile.svg"), url("../../img/header-background-mobile@2x.png"); } }
+      background-image: url("../img/plates-mobile@2x.png"), url("../img/triangles-header-mobile.svg"), url("../img/header-background-mobile@2x.png"); } }
   @media (min-width: 1024px) {
     .intro a:hover {
       cursor: pointer;
@@ -940,7 +949,7 @@ a {
           display: none; } }
 
 .page-footer__navigation li {
-  width: 235px; }
+  width: 43%; }
   .page-footer__navigation li:nth-child(2) {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -966,10 +975,12 @@ a {
         -ms-flex-order: 5;
             order: 5; }
   @media (max-width: 1023px) {
-    .page-footer__navigation li:nth-child(n) {
-      -webkit-box-ordinal-group: unset;
-          -ms-flex-order: unset;
-              order: unset; } }
+    .page-footer__navigation li {
+      width: auto; }
+      .page-footer__navigation li:nth-child(n) {
+        -webkit-box-ordinal-group: unset;
+            -ms-flex-order: unset;
+                order: unset; } }
 
 .page-footer__navigation-activity {
   display: -webkit-box;
@@ -1144,13 +1155,13 @@ a {
       cursor: pointer; } }
 
 .information {
-  background-image: url("../../img/triangle-about-us-small-left.svg"), url("../../img/triangle-about-us-small-right.svg"), url("../../img/triangle-about-us-big-right.svg"), url("../../img/triangle-about-us-big-left.svg");
+  background-image: url("../img/triangle-about-us-small-left.svg"), url("../img/triangle-about-us-small-right.svg"), url("../img/triangle-about-us-big-right.svg"), url("../img/triangle-about-us-big-left.svg");
   background-position: 11.9% 45px, bottom 54.3% right 1.7%, 53.5% 147px, -28.2% 114%;
   background-size: 226px 261px, 226px 261px, 872px 873px, 872px 873px;
   background-repeat: no-repeat; }
   @media (max-width: 1023px) {
     .information {
-      background-image: url("../../img/triangle-about-us-big-right.svg");
+      background-image: url("../img/triangle-about-us-big-right.svg");
       background-position: right 308% top 90px;
       background-size: 872px 873px; } }
   @media (max-width: 767px) {
@@ -1293,24 +1304,24 @@ a {
   padding-right: 10px;
   padding-bottom: 50px;
   color: #666666;
-  background-image: url("../../img/2005@1x.png");
+  background-image: url("../img/2005@1x.png");
   background-position: -29px 5px;
   background-size: 220px 319px;
   background-repeat: no-repeat; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     .about-us {
-      background-image: url("../../img/2005@2x.png"); } }
+      background-image: url("../img/2005@2x.png"); } }
   @media (max-width: 1023px) {
     .about-us {
       padding-left: 182px;
       padding-right: 0;
       padding-bottom: 23px;
-      background-image: url("../../img/2005-tablet@1x.png");
+      background-image: url("../img/2005-tablet@1x.png");
       background-position: -25px 0;
       background-size: 243px 359px; } }
   @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi) {
     .about-us {
-      background-image: url("../../img/2005-tablet@2x.png"); } }
+      background-image: url("../img/2005-tablet@2x.png"); } }
   @media (max-width: 767px) {
     .about-us {
       padding-left: 0;
@@ -1438,11 +1449,11 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 370px;
+  width: 31.624%;
   height: 620px;
   margin-bottom: 24px; }
   .services li:not(:nth-of-type(3n)) {
-    margin-right: 30px; }
+    margin-right: 2.565%; }
   @media (min-width: 1388px) {
     .services li:nth-of-type(4n) {
       margin-left: 30px; } }
@@ -1458,7 +1469,7 @@ a {
   @media (max-width: 767px) {
     .services li {
       margin-bottom: 30px;
-      width: 290px;
+      width: 100%;
       height: 256px; } }
 
 .services a {
@@ -1472,6 +1483,7 @@ a {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
+  background-size: cover;
   background-color: #203b41; }
   @media (min-width: 1024px) {
     .services a:hover {
@@ -1480,58 +1492,58 @@ a {
       transition: opacity 0.3s ease-out; } }
 
 .services__manufacture {
-  background-image: url("../../img/manufacture-photo-desktop@1x.png"); }
+  background-image: url("../img/manufacture-photo-desktop@1x.png"); }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     .services__manufacture {
-      background-image: url("../../img/manufacture-photo-desktop@2x.png"); } }
+      background-image: url("../img/manufacture-photo-desktop@2x.png"); } }
   @media (max-width: 1023px) {
     .services__manufacture {
-      background-image: url("../../img/manufacture-photo-tablet@1x.png"); } }
+      background-image: url("../img/manufacture-photo-tablet@1x.png"); } }
   @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi) {
     .services__manufacture {
-      background-image: url("../../img/manufacture-photo-tablet@2x.png"); } }
+      background-image: url("../img/manufacture-photo-tablet@2x.png"); } }
   @media (max-width: 767px) {
     .services__manufacture {
-      background-image: url("../../img/manufacture-photo-mobile@1x.png"); } }
+      background-image: url("../img/manufacture-photo-mobile@1x.png"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
     .services__manufacture {
-      background-image: url("../../img/manufacture-photo-mobile@2x.png"); } }
+      background-image: url("../img/manufacture-photo-mobile@2x.png"); } }
 
 .services__assembly {
-  background-image: url("../../img/assembly-photo-desktop@1x.png"); }
+  background-image: url("../img/assembly-photo-desktop@1x.png"); }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     .services__assembly {
-      background-image: url("../../img/assembly-photo-desktop@2x.png"); } }
+      background-image: url("../img/assembly-photo-desktop@2x.png"); } }
   @media (max-width: 1023px) {
     .services__assembly {
-      background-image: url("../../img/assembly-photo-tablet@1x.png"); } }
+      background-image: url("../img/assembly-photo-tablet@1x.png"); } }
   @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi) {
     .services__assembly {
-      background-image: url("../../img/assembly-photo-tablet@2x.png"); } }
+      background-image: url("../img/assembly-photo-tablet@2x.png"); } }
   @media (max-width: 767px) {
     .services__assembly {
-      background-image: url("../../img/assembly-photo-mobile@1x.png"); } }
+      background-image: url("../img/assembly-photo-mobile@1x.png"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
     .services__assembly {
-      background-image: url("../../img/assembly-photo-mobile@2x.png"); } }
+      background-image: url("../img/assembly-photo-mobile@2x.png"); } }
 
 .services__acessories {
-  background-image: url("../../img/accessories-photo-desktop@1x.png"); }
+  background-image: url("../img/accessories-photo-desktop@1x.png"); }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     .services__acessories {
-      background-image: url("../../img/accessories-photo-desktop@2x.png"); } }
+      background-image: url("../img/accessories-photo-desktop@2x.png"); } }
   @media (max-width: 1023px) {
     .services__acessories {
-      background-image: url("../../img/accessories-photo-tablet@1x.png"); } }
+      background-image: url("../img/accessories-photo-tablet@1x.png"); } }
   @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi) {
     .services__acessories {
-      background-image: url("../../img/accessories-photo-tablet@2x.png"); } }
+      background-image: url("../img/accessories-photo-tablet@2x.png"); } }
   @media (max-width: 767px) {
     .services__acessories {
-      background-image: url("../../img/accessories-photo-mobile@1x.png"); } }
+      background-image: url("../img/accessories-photo-mobile@1x.png"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
     .services__acessories {
-      background-image: url("../../img/accessories-photo-mobile@2x.png"); } }
+      background-image: url("../img/accessories-photo-mobile@2x.png"); } }
 
 .services svg {
   fill: none; }
@@ -1571,13 +1583,13 @@ a {
 
 .feedback {
   background-color: #00b3ff;
-  background-image: url("../../img/paper-plane@1x.png"), url("../../img/triangles-header-desktop.svg"), url("../../img/triangle-feedback-small.svg"), url("../../img/triangle-feedback-big.svg");
+  background-image: url("../img/paper-plane@1x.png"), url("../img/triangles-header-desktop.svg"), url("../img/triangle-feedback-small.svg"), url("../img/triangle-feedback-big.svg");
   background-position: top 42.3% left 24.8%, top 51.5% left 15%, top 19.7% right 5.8%, top 84% right -4.7%;
   background-size: 511px 288px, auto, auto, auto;
   background-repeat: no-repeat; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     .feedback {
-      background-image: url("../../img/paper-plane@2x.png"), url("../../img/triangles-header-desktop.svg"); } }
+      background-image: url("../img/paper-plane@2x.png"), url("../img/triangles-header-desktop.svg"); } }
   .feedback p,
   .feedback input,
   .feedback textarea,
@@ -2175,3 +2187,13 @@ a {
     outline-color: black;
     outline-style: auto;
     outline-width: 1px; }
+
+.svg-sprite__logo-name {
+  fill: white; }
+  @media (max-width: 767px) {
+    .svg-sprite__logo-name {
+      display: none; } }
+
+@media (max-width: 767px) {
+  .svg-sprite__logo-description {
+    display: none; } }
