@@ -1,11 +1,27 @@
 .accordion-toggler {
   display: none;
 
+  & span {
+    display: none;
+  }
+
   @media (max-width: $max-mobile-width) {
     display: flex;
     align-items: center;
     justify-content: center;
 
     @include no-button-style;
+
+    & span {
+      display: block;
+
+      font-family: $roboto-condensed;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
   }
 }
